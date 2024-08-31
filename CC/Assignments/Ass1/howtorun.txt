@@ -1,0 +1,12 @@
+--Install Flex 
+sudo apt-get install flex
+
+--generate c source code for lexical analyser
+flex lexical_analyzer.l
+
+--compile generated lex.yy.c usign c compiler (-lfl link the flex library)
+gcc lex.yy.c -o lexer -lfl
+
+--run lexical analyser on c file
+./lexer input_file.c
+
