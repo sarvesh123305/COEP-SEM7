@@ -1,0 +1,29 @@
+
+Requirements for Distributed Pervasive Systems
+Embrace Contextual Changes:
+
+Explanation: Pervasive systems must adapt to dynamic changes in their environment (such as location, device capabilities, user preferences, network conditions). They should be flexible enough to respond automatically to these changes without disrupting user experience. This could involve adjusting resource usage or switching between devices seamlessly.
+Encourage Ad Hoc Composition:
+
+Explanation: Pervasive systems should allow for the spontaneous creation of systems or services on the fly. Different components or devices should be able to interact with each other without preconfiguration. For example, devices should connect and work together based on immediate needs without requiring manual setup.
+Recognize Sharing as the Default:
+
+Explanation: In pervasive systems, the assumption is that resources, data, and services are shared among multiple users or devices by default. This promotes collaboration and efficient use of resources across the system, rather than limiting access to specific users or devices.
+Support Distribution Transparency:
+
+Explanation: Pervasive systems should hide the complexity of distributed operations from users and developers. Distribution transparency means that the system appears as a unified entity, even though it may be spread across multiple devices or networks. Users shouldn't need to be aware of where resources are located or how they're managed behind the scenes.
+
+
+The openness of distributed systems refers to the ability of these systems to seamlessly interact and cooperate with other systems, regardless of their underlying environment or platform. This openness allows flexibility, scalability, and easier integration with external services or systems. The key points are:
+
+1. Be able to interact with services from other open systems, irrespective of the underlying environment:
+Explanation: Distributed systems should have the ability to communicate with external systems, regardless of differences in the operating system, hardware, or network environment. This ensures that services can be shared and utilized across different platforms.
+2. Systems should conform to well-defined interfaces:
+Explanation: For distributed systems to be interoperable, they need to adhere to standardized, well-defined interfaces (such as APIs, protocols, or service specifications). This ensures that different systems or components can understand and communicate with each other consistently.
+3. Systems should easily interoperate:
+Explanation: Distributed systems should be designed in a way that allows them to work together with other systems without complex integration or extensive customization. Interoperability means that components from different systems can exchange information and function as part of a larger network without any manual intervention.
+4. Systems should support portability of applications:
+Explanation: Applications should be able to run across different distributed systems without needing to be rewritten or significantly modified. This is achieved by using standard programming models, libraries, and services, ensuring that an application developed on one platform can be easily ported to another.
+5. Systems should be easily extensible:
+Explanation: Open distributed systems should allow for easy expansion or modification to incorporate new features, services, or components. Extensibility ensures that the system can evolve over time, adding new functionalities without significant changes to the underlying architecture.
+
