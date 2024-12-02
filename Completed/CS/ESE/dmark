@@ -1,0 +1,69 @@
+DMARC (Domain-based Message Authentication, Reporting, and Conformance), DKIM (DomainKeys Identified Mail), and SPF (Sender Policy Framework) work together to enhance email authentication and security. Here's how the process unfolds in detail:
+
+Step 1: Sender Configures SPF, DKIM, and DMARC
+SPF:
+
+The domain owner publishes an SPF record in DNS.
+The SPF record specifies which mail servers are authorized to send emails on behalf of the domain.
+DKIM:
+
+The domain owner generates a public-private key pair.
+The public key is published in DNS as a TXT record.
+The private key is stored securely and used by the mail server to sign outgoing emails with a digital signature.
+DMARC:
+
+The domain owner creates a DMARC policy and publishes it in DNS.
+The DMARC policy specifies:
+How to handle emails failing SPF/DKIM checks (none, quarantine, reject).
+Where to send reports of authentication results (e.g., failure reports).
+Step 2: Sender Sends an Email
+The sender’s mail server:
+Checks its SPF record to confirm it is authorized to send.
+Adds a DKIM signature to the email using the domain’s private key.
+Step 3: Recipient’s Mail Server Processes the Email
+SPF Validation:
+
+The recipient’s server queries the DNS for the sender’s SPF record.
+It checks if the sending server's IP matches the SPF record.
+Result: pass or fail.
+DKIM Validation:
+
+The recipient’s server checks for a DKIM-Signature in the email header.
+It retrieves the public key from the sender’s DNS and uses it to verify the signature.
+Result: pass or fail.
+DMARC Enforcement:
+
+The recipient’s server checks the DMARC policy in the sender’s DNS.
+DMARC verifies:
+Whether the email passes SPF and/or DKIM.
+Whether the “From” address aligns with the domain used in SPF/DKIM.
+Based on the DMARC policy:
+Emails failing DMARC are rejected, quarantined, or allowed through.
+Step 4: Reporting and Feedback
+The recipient sends feedback (as specified in the DMARC record) back to the domain owner about:
+Authentication results.
+Any failures or suspicious activities.
+Reports help the domain owner refine their SPF/DKIM/DMARC configuration and monitor misuse.
+Example Workflow
+Scenario: Email sent from example.com
+Sender: Mail server of example.com sends an email.
+SPF:
+Recipient queries DNS for example.com's SPF record.
+The sending server’s IP matches, so SPF passes.
+DKIM:
+The email has a DKIM signature.
+Recipient retrieves example.com's public key from DNS.
+The signature verifies successfully, so DKIM passes.
+DMARC:
+Recipient checks DMARC policy for example.com.
+DMARC requires SPF/DKIM to pass and "From" to align with the domain.
+Both pass, so the email is delivered.
+Benefits of Using All Three
+SPF:
+Prevents spoofing by verifying authorized mail servers.
+DKIM:
+Ensures message integrity and authenticity.
+DMARC:
+Aligns SPF/DKIM results with the "From" domain.
+Enforces actions on failed messages.
+Provides reporting for enhanced monitoring.

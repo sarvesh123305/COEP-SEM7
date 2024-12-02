@@ -1,0 +1,16 @@
+xtensible Authentication Protocol (EAP)
+
+Based on the images you provided, EAP is a flexible authentication framework used in various network scenarios. It allows for secure communication between a client (like a computer or mobile device) and a server (like a network access point or authentication server).
+
+How it works:
+
+Negotiation: The client and server agree to use EAP during the connection establishment.
+Method Selection: They negotiate a specific EAP method (e.g., PEAP, EAP-TLS, etc.) based on the available options.
+Authentication Exchange: The client and server exchange messages using the chosen EAP method to verify the client's identity.
+Access Grant or Denial: Based on the authentication result, the server either grants or denies access to the network.
+Key Points from the Images:
+
+Flexibility: EAP is not tied to specific authentication methods. It can support a variety of schemes, including those based on passwords, tokens, certificates, and biometrics.
+Wide Applicability: EAP is used in various network scenarios, including dial-up connections, wireless networks (802.1X), and VPNs.
+Security: EAP provides a secure way to authenticate users and devices, helping to protect network resources from unauthorized access.
+In essence, EAP is a versatile tool that enables secure, flexible, and customizable authentication in modern networks.
